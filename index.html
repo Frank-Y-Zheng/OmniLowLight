@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OmniLowLight benchmarks generative low-light enhancement across panoramic, perspective, and fisheye images. Request access for academic research.">
+  <title>OmniLowLight · A benchmark across image representations</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23123138'/%3E%3Ccircle cx='20' cy='20' r='11' fill='none' stroke='%23b9f87d' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav wrap">
+    <a class="wordmark" href="#"><span class="mark" aria-hidden="true"></span>OmniLowLight</a>
+    <nav aria-label="Main navigation"><a href="#benchmark">Benchmark</a><a href="#access">Dataset access</a><a href="https://github.com/Frank-Y-Zheng/OmniLowLight">GitHub ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <p class="eyebrow"><span class="dot"></span> Accepted · IEEE Open Journal on Immersive Displays</p>
+      <h1>Low light.<br>Three perspectives.<br><em>One benchmark.</em></h1>
+      <p class="subtitle">OmniLowLight: Benchmarking Generative Low-Light Enhancement Across Image Representations</p>
+      <p class="authors">Yushuo Zheng · Hao Jiang · Lei Fan · Kaiyuan Ji · Haijiang Sun · Yide Liu · Huiyu Duan · Zicheng Zhang</p>
+      <div class="actions"><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeag4SsvnbCV0tmiLBIKlMib-FyDJ1MGoPMuy3a0LfK-vCrrA/viewform" target="_blank" rel="noopener noreferrer">Request dataset access <span aria-hidden="true">↗</span></a><a class="text-link" href="#benchmark">Explore the benchmark <span aria-hidden="true">↓</span></a></div>
+      <figure class="teaser"><img src="assets/teaser.jpg" alt="Aligned slices of the same outdoor panorama captured at different exposures, from well exposed to severely underexposed."><figcaption><span>CAPTURED, NOT SYNTHETICALLY DARKENED</span> Exposure variation from the same scene.</figcaption></figure>
+    </section>
+    <section class="benchmark wrap" id="benchmark">
+      <div class="section-heading"><p class="eyebrow">01 / The benchmark</p><h2>Enhancement quality,<br>across representations.</h2></div>
+      <div class="overview"><p>Generative image editors can brighten a dark photograph. How well do they preserve the reference scene when the image is panoramic, perspective, or fisheye?</p><p>OmniLowLight studies <strong>captured daytime underexposure</strong> using paired dark inputs and well-exposed photographic references. Nighttime low-light photography is outside this benchmark’s scope.</p></div>
+      <div class="stats"><div><strong>150</strong><span>paired inputs &amp; references</span></div><div><strong>3</strong><span>image representations</span></div><div><strong>24</strong><span>evaluated configurations</span></div><div><strong>3,600</strong><span>evaluated outputs</span></div></div>
+      <div class="views"><article><span class="view-id">01</span><h3>Panoramic</h3><p>50 paired equirectangular views.</p></article><article><span class="view-id">02</span><h3>Perspective</h3><p>50 paired perspective viewports.</p></article><article><span class="view-id">03</span><h3>Fisheye</h3><p>50 paired single-lens fisheye views.</p></article></div>
+      <p class="method-note">105 source captures · 51 geographic blocks · 21 generative-editor configurations, 2 specialist methods, and an unchanged-input Identity control.</p>
+    </section>
+    <section class="results wrap">
+      <div class="section-heading"><p class="eyebrow">02 / Evaluation</p><h2>More than brightness.</h2></div>
+      <p class="section-intro">Reference similarity and predicted image quality measure different aspects of enhancement. We evaluate PSNR, SSIM, LPIPS, and MUSIQ on a fixed reference grid, with full-frame scoring and geographic-block bootstrap intervals.</p>
+      <figure class="quality"><img src="assets/quality.png" alt="Scatter plots comparing macro PSNR with MUSIQ, and SSIM with LPIPS, across open-source, closed-source, specialist, and Identity methods." loading="lazy"><figcaption>Results from the paper. Reference-based leaders differ across representations and metrics.</figcaption></figure>
+    </section>
+    <section class="access-section" id="access"><div class="wrap access-layout">
+      <div><p class="eyebrow">03 / Dataset access</p><h2>Available for<br>academic research.<br><em>By request.</em></h2><p>Access is reviewed individually. Dataset files and download details are shared privately with approved applicants.</p><a class="button light" href="https://docs.google.com/forms/d/e/1FAIpQLSeag4SsvnbCV0tmiLBIKlMib-FyDJ1MGoPMuy3a0LfK-vCrrA/viewform" target="_blank" rel="noopener noreferrer">Open the access-request form ↗</a></div>
+      <div class="steps"><article><span>1</span><div><h3>Read the terms</h3><p>Non-commercial academic research only. No redistribution of dataset files, annotations, archived outputs, or access details.</p><a href="https://github.com/Frank-Y-Zheng/OmniLowLight/blob/main/DATASET_TERMS.md">Read dataset access terms ↗</a></div></article><article><span>2</span><div><h3>Submit a request</h3><p>Provide your name, institutional email, affiliation, research purpose, and agreement to the terms through Google Forms.</p></div></article><article><span>3</span><div><h3>Receive a decision privately</h3><p>The maintainers review each request. Submission does not automatically grant access. Approved applicants receive instructions privately.</p></div></article></div>
+    </div></section>
+    <section class="citation wrap"><p class="eyebrow">04 / Citation</p><h2>Using OmniLowLight?</h2><p>Please cite the paper and report the dataset version and any preprocessing. Publication identifiers will be added when assigned.</p><pre><code>@article{zheng2026omnilowlight,
+  title = {OmniLowLight: Benchmarking Generative Low-Light
+           Enhancement Across Image Representations},
+  author = {Zheng, Yushuo and Jiang, Hao and Fan, Lei and
+            Ji, Kaiyuan and Sun, Haijiang and Liu, Yide and
+            Duan, Huiyu and Zhang, Zicheng},
+  journal = {IEEE Open Journal on Immersive Displays},
+  note = {Accepted for publication}
+}</code></pre></section>
+  </main>
+  <footer class="wrap"><a class="wordmark" href="#">OmniLowLight</a><p>Research access by request. No public dataset download.</p><a href="https://github.com/Frank-Y-Zheng/OmniLowLight">GitHub ↗</a></footer>
+</body>
+</html>
